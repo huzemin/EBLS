@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Elbs</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <!-- layout:main.xml -->
+    <string name="logintitle">ELBS</string>
+	<!-- MainActivity AlertDailog quit -->
+	<string name="cancel">取消</string>
+	<string name="sure">确定</string>
+	<string name="setting">设置</string>
+	<string name="func_img_cd">功能图标</string>
+	<string name="main_title">功能</string>
+	<string name="back">返回</string>
+	<string name="edetail">员工信息</string>
+</resources>

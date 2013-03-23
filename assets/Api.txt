@@ -1,0 +1,8 @@
+#后台登录
+http://localhost:8800/track/adminLogin.jxp?action=adminLogin
+->
+username:admin
+password:admin
+#前台
+http://localhost:8800/track/api.jxp?action=login&username=admin&password=admin
+null({"success": true, "msg":"登录成功", "data": {"user":{"birthday":{"date":30,"day":1,"hours":0,"minutes":3,"month":0,"nanos":0,"seconds":0,"time":1327852980000,"timezoneOffset":-480,"year":112},"contact":"12345678","createdtime":{"date":30,"day":5,"hours":15,"minutes":14,"month":2,"nanos":754000000,"seconds":33,"time":1333091673754,"timezoneOffset":-480,"year":112},"department":"administrator","email":"admin@admin.com","employeeno":"","enabled":true,"enabled1":true,"idcard":"","nickname":"admin","password":"admin","photo":"","root":"root","sex":"m","uid":"20120330151433754","updatedtime":{"date":30,"day":5,"hours":15,"minutes":14,"month":2,"nanos":754000000,"seconds":33,"time":1333091673754,"timezoneOffset":-480,"year":112},"username":"admin"},"auth":{"aid":"20120330151434006","authority":"ROLE_ADMIN","uid":"20120330151433754"}}})

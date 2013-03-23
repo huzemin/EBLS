@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_bg"
+    android:orientation="vertical" >
+
+    <!-- 标题栏设计 一个返回按钮和一个签到按键 -->
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/info_back_btn"
+            style="@style/title_bar_text_style"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/title_btn_back"
+            android:onClick="infobackbtnclick"
+            android:text="返回"
+            android:textSize="19sp" />
+
+        <TextView
+            style="@style/title_bar_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人信息" />
+
+        <ImageButton
+            android:id="@+id/btninfoedit"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/title_btn_right"
+            android:onClick="infoeditbtnclick"
+            android:src="@drawable/title_btn_function" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/btnlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="20dp" >
+
+        <Button
+            android:id="@+id/info_update_btn"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_style_green"
+            android:onClick="updateclick"
+            android:text="修改"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/info_reset_btn"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_white_style"
+            android:clickable="true"
+            android:onClick="resetclick"
+            android:text="重置"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- HeadImage, UserName, Birthday, Sex(Not), NickName, root, department,contact,email, -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/info_img"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_margin="5sp"
+                android:padding="5sp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/xiaohei" />
+
+            <TextView
+                android:id="@+id/info_uid"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5sp"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="uid"
+                android:textSize="19sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="用户 :"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp" />
+
+                <EditText
+                    android:id="@+id/info_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_editbox"
+                    android:enabled="false"
+                    android:hint="用户名"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="昵称 :"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+
+                <EditText
+                    android:id="@+id/info_nickname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_editbox"
+                    android:enabled="false"
+                    android:hint="昵称"
+                    android:singleLine="true"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="生日 :"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+
+                <EditText
+                    android:id="@+id/info_birthday"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_editbox"
+                    android:enabled="false"
+                    android:hint="生日F(1990-10-1)"
+                    android:singleLine="true"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:gravity="right"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:text="邮箱 :"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+
+                <EditText
+                    android:id="@+id/info_mail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_editbox"
+                    android:enabled="false"
+                    android:hint="邮箱"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="联系 :"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp" />
+
+                <EditText
+                    android:id="@+id/info_contact"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_editbox"
+                    android:enabled="false"
+                    android:hint="联系"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="上级 :"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp" />
+
+                <EditText
+                    android:id="@+id/info_root"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_editbox"
+                    android:enabled="false"
+                    android:hint="上级"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="部门 :"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp" />
+
+                <EditText
+                    android:id="@+id/info_department"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_editbox"
+                    android:enabled="false"
+                    android:hint="部门"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
